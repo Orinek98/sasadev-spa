@@ -20,4 +20,4 @@ export const moonIcon = `<svg width="24" height="24" fill="currentColor" viewBox
 <svg width="${headerIconSize}" height="${headerIconSize}" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"></svg>
 
 <svg width="${headerIconSize}" height="${headerIconSize}" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"></svg> */
-}
+};

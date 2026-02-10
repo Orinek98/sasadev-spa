@@ -1,0 +1,15 @@
+// 1. Configurazioni di base (NECESSARIE per far funzionare i mixin)
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/root";
+
+// 2. IL COMPONENTE CAROUSEL
+@import "bootstrap/scss/carousel";
+
+// 3. (Opzionale) Utilities
+// Bootstrap Carousel usa classi come 'd-block', 'w-100', 'd-none'.
+// Se vuoi usare SOLO Tailwind per queste cose, NON importare le utilities qui sotto.
+// Se invece vuoi mantenere l'HTML originale di Bootstrap, scommenta questa riga:
+// @import "bootstrap/scss/utilities";

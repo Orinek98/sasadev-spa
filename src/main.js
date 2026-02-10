@@ -1,8 +1,11 @@
-import { getIcon, moonIcon } from "./icons.js";
+import { getIcon, moonIcon} from "./icons.js";
+import { SpaCarousel } from './carousel.js';
+import './styles/custom-bootstrap.scss'; 
 
 //Theme toggle button
 const themeToggleBtn = document.getElementById('theme-toggle');
 themeToggleBtn.innerHTML = moonIcon;
+
 
 themeToggleBtn.addEventListener('click', () => {
     if (document.documentElement.classList.contains('dark')) {
@@ -15,7 +18,7 @@ themeToggleBtn.addEventListener('click', () => {
 });
 
 // Heder social buttons
-const headerIconSize = '2.4rem';
+const headerIconSize = '2.8rem';
 const mailBtn = document.getElementById('mail-btn');
 mailBtn.innerHTML = getIcon('mail', headerIconSize);
 mailBtn.addEventListener('click', () => {
@@ -32,6 +35,24 @@ const gitBtn = document.getElementById('git-btn');
 gitBtn.innerHTML = getIcon('git', headerIconSize);
 gitBtn.addEventListener('click', () =>{
   window.open('https://github.com/Orinek98');
+});
+
+// // // Carousel
+const myImages = [
+    { src: './src/assets/pictures/guate1.webp', alt: 'Tikal Temple' },
+    { src: './src/assets/pictures/guate2.webp', alt: 'Lake Atitlan' },
+    { src: './src/assets/pictures/etna.webp', alt: 'Mount Etna' },
+];
+
+// Creazione
+const myCarousel = new SpaCarousel('carousel-container', myImages);
+
+// Avvio
+myCarousel.mount();
+
+const filmBtn = document.getElementById('film-btn');
+filmBtn.addEventListener('click', () => {
+    window.open('https://www.instagram.com/filmcanmovies');
 });
 
 //Footer social buttons
@@ -53,3 +74,5 @@ gitFooterBtn.innerHTML = getIcon('git', footerIconSize);
 gitFooterBtn.addEventListener('click', () =>{
   window.open('https://github.com/Orinek98');
 });
+
+

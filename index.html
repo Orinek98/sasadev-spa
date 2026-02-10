@@ -18,7 +18,7 @@
 </head>
 
 <body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300">
-  <main class="px-10 md:px-20 lg:px-40">
+  <main class="px-10 md:px-20 lg:px-40 mb-12">
     <section class="min-h-screen">
       <nav class="py-10 mb-4 flex justify-between items-center">
         <ul class="flex items-center">
@@ -27,7 +27,7 @@
           </li>
         </ul>
         <button id="theme-toggle"
-          class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-2.5 transition-all active:scale-95"></button>
+          class="text-gray-800 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-2.5 transition-all active:scale-95"></button>
       </nav>
       <div class="text-center p-10 xxs:p-6">
         <h2 class="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
@@ -37,54 +37,85 @@
           Front-end Developer
         </h3>
       </div>
-      <div class="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+      <div class="text-5xl flex justify-center gap-16 py-3 dark:text-gray-300 mb-6">
         <button id="mail-btn" class="ease-in duration-200 hover:scale-125 hover:cursor-pointer"></button>
         <button id="linkedin-btn" class="ease-in duration-200 hover:scale-125 hover:cursor-pointer"></button>
         <button id="git-btn" class="ease-in duration-200 hover:scale-125 hover:cursor-pointer"></button>
       </div>
-      <div class='relative mx-auto rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96'>
-        <img alt="me" src="./src/assets/img_curr.JPG" class='object-cover absolute -top-[17%]' />
+      <div class='relative rounded-full mx-auto size-80 overflow-hidden md:size-96'>
+        <img alt="me" src="./src/assets/avatarIcon.jpg"
+          class='object-contain size-full absolute scale-105 translate-y-1 translate-x-1' />
       </div>
     </section>
 
-    <section>
-      <p className='text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto'>
-        Hi, I&apos;m a web developer based in Catania(Italy). I studied computer science at the University of Catania,
-        which gave me the basis to independently study web development. At the moment I am a beginner in the sector
-        but I really want to learn and get involved. I&apos;m specialized in the front-end, but I have good knowledge
-        of the back-end as well.
+    <section class="mb-12">
+      <p class='text-md leading-8 text-gray-800 md:text-xl lg:max-w-[40%] mx-auto dark:text-gray-300'>
+        Ciao, sono Saverio, Junior Web Developer.<br />Dopo aver acquisito le basi teoriche dell'informatica
+        all'Università di Catania, sto perfezionando la mia formazione pratica presso l'ITS Steve Jobs Academy. Qui
+        lavoro su progetti concreti, padroneggiando le tecnologie più attuali. Unisco dedizione e curiosità a un
+        approccio pragmatico al problem solving. Cerco un ambiente stimolante dove poter crescere e portare valore.
       </p>
     </section>
     <h3 class="text-3xl pt-10 pb-6">
-      Technology that i use
+      Il mio stack tecnologico
     </h3>
     <div class='lg:flex justify-center gap-10 '>
       <div
         class='flex-1 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-200 dark:shadow-gray-500 dark:shadow-lg'>
-        <h4 class='text-2xl pb-6'>Front-end</h4>
+        <h4 class='text-2xl pb-6 dark:text-gray-800'>Front-end</h4>
         <div>
-          <img alt='react' src="./src/assets/devIcons/react.png" class='w-20 inline m-3'/>
-          <img alt='react' src="./src/assets/devIcons/next.js.png" class='w-20 inline m-3'/>
-          <img alt='tailwind' src="./src/assets/devIcons/tailwind.png" class='w-20 inline m-3'/>
+          <img alt='react' src="./src/assets/devIcons/reactIcon.png" class='w-20 inline m-3' />
+          <img alt='react' src="./src/assets/devIcons/nextjsIcon.png" class='w-20 inline m-3' />
+          <img alt='react' src="./src/assets/devIcons/angularIcon.png" class='w-20 inline m-3' />
+          <img alt='tailwind' src="./src/assets/devIcons/tailwind.png" class='w-20 inline m-3' />
+          <img alt='tailwind' src="./src/assets/devIcons/bootIcon.png" class='w-20 inline m-3' />
         </div>
       </div>
       <div
         class='flex-1 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-200 dark:shadow-gray-500 dark:shadow-lg'>
-        <h4 class='text-2xl pb-6'>Back-end</h4>
-        <img alt='node' src="./src/assets/devIcons/node.png" class='w-20 inline m-3' />
-        <img alt='express' src="./src/assets/devIcons/express.png" class='w-20 inline m-3' />
-        <img alt='react' src="./src/assets/devIcons/next.js.png" class='w-20 inline m-3' />
-
+        <h4 class='text-2xl pb-6 dark:text-gray-800'>Back-end</h4>
+        <img alt='node' src="./src/assets/devIcons/nodeIcon.png" class='w-20 inline m-3' />
+        <img alt='express' src="./src/assets/devIcons/expressIcon.png" class='w-20 inline m-3' />
+        <img alt='react' src="./src/assets/devIcons/nextjsIcon.png" class='w-20 inline m-3' />
+        <img alt='react' src="./src/assets/devIcons/angularIcon.png" class='w-20 inline m-3' />
       </div>
       <div
         class='flex-1 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-200 dark:shadow-gray-500 dark:shadow-lg'>
-        <h4 class='text-2xl pb-6'>Others</h4>
-        <img alt='npm' src="./src/assets/devIcons/npm.png" class='w-20 inline m-3' />
-        <img alt='git' src="./src/assets/devIcons/git.png" class='w-20 inline m-3' />
-        <img alt='mongo' src="./src/assets/devIcons/mongodb.png" class='w-20 inline m-3' />
+        <h4 class='text-2xl pb-6 dark:text-gray-800'>Others</h4>
+        <img alt='npm' src="./src/assets/devIcons/npmIcon.png" class='w-20 inline m-3' />
+        <img alt='git' src="./src/assets/devIcons/gitIcon.png" class='w-20 inline m-3' />
+        <img alt='mongo' src="./src/assets/devIcons/mongoIcon.png" class='w-20 inline m-3' />
         <img alt='mongo' src="./src/assets/devIcons/mysql.png" class='w-20 inline m-3' />
       </div>
     </div>
+
+    <section>
+      <h3 class="text-3xl pt-10 pb-6">
+        Creative Background
+      </h3>
+      <div class="flex gap-10 flex-col lg:flex-row items-center">
+        <div id="carousel-container" class="w-full"></div>
+        <div class="lg:max-w-[40%]">
+          <p class="text-md leading-8 text-gray-800 md:text-xl dark:text-gray-300 mb-6">Fin da piccolo coltivo una forte
+            passione per la fotografia e il video, settori in cui ho maturato anche esperienza
+            professionale. Questo background arricchisce il mio approccio allo sviluppo web, permettendomi di
+            curare con particolare attenzione l'estetica e la composizione dei progetti.
+          </p>
+          <div class="flex items-center w-full">
+            <p class="basis-2/3 text-sm leading-8 text-gray-800 md:text-xl dark:text-gray-300 text-balance">
+              Faccio parte del collettivo Filmcan Movies, siamo un gruppo di creativi che si dedicano alla produzione di
+              cortometraggi e videoclip. Qui trovi la nostra pagina social:
+            </p>
+            <div class="basis-1/3 flex justify-center">
+              <button id="film-btn" class="rounded-full bg-white p-2 ease-in duration-200 inline-block shadow-lg shadow-gray-400/50  dark:shadow-white/30 hover:shadow-xl dark:hover:shadow-white/50    ">
+                <img alt='filmcan' src="./src/assets/LogoFilm.png" class='w-32 inline' />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </main>
   <footer
     class='flex flex-col items-center bg-gradient-to-t from-teal-600 to-teal-400 opacity-80 dark:bg-gradient-to-t dark:from-teal-800 dark:to-teal-600'>
@@ -98,4 +129,5 @@
     <!-- </Link> -->
   </footer>
 </body>
+
 </html>
