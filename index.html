@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="src/assets/sasadevIco.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>sasadev-vanilla</title>
+  <title>sasaDev</title>
   <script>
     if (sessionStorage.getItem('theme') === 'dark' || (!('theme' in sessionStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
@@ -13,120 +13,170 @@
       document.documentElement.classList.remove('dark');
     }
   </script>
-  <link href="./src/compiledStyle.css" rel="stylesheet" />
+  <link href="./src/styles/compiledStyle.css" rel="stylesheet" />
   <script src="./src/main.js" type="module"></script>
 </head>
 
 <body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white transition-colors duration-300">
-  <main class="px-10 md:px-20 lg:px-40 mb-12">
-    <section class="min-h-screen">
-      <nav class="py-10 mb-4 flex justify-between items-center">
+
+  <main class="px-5 md:px-20 lg:px-40 mb-12">
+
+    <section class="flex flex-col xl:min-h-screen xl:justify-center pt-10 lg:pt-20 xl:pt-0">
+
+      <nav class="py-4 md:py-10 mb-4 flex justify-between items-center">
         <ul class="flex items-center">
           <li>
-            <h1 class="text-2xl font-burtons pt-1 dark:text-gray-200">sasaDev</h1>
+            <h1 class="text-xl md:text-2xl font-burtons pt-1 dark:text-gray-200">sasaDev</h1>
           </li>
         </ul>
         <button id="theme-toggle"
           class="text-gray-800 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-full p-2.5 transition-all active:scale-95"></button>
       </nav>
-      <div class="text-center p-10 xxs:p-6">
-        <h2 class="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
+
+      <div class="text-center p-4 md:p-10">
+        <h2 class="text-4xl py-2 text-teal-600 font-medium md:text-6xl">
           Saverio Santonocito
         </h2>
-        <h3 class="text-2xl py-2 md:text-3xl">
-          Front-end Developer
+        <h3 class="text-xl py-2 md:text-3xl">
+          Full Stack Web Developer
         </h3>
       </div>
-      <div class="text-5xl flex justify-center gap-16 py-3 dark:text-gray-300 mb-6">
+
+      <div class="text-5xl flex justify-center gap-8 md:gap-16 py-3 dark:text-gray-300 mb-6">
         <button id="mail-btn" class="ease-in duration-200 hover:scale-125 hover:cursor-pointer"></button>
         <button id="linkedin-btn" class="ease-in duration-200 hover:scale-125 hover:cursor-pointer"></button>
         <button id="git-btn" class="ease-in duration-200 hover:scale-125 hover:cursor-pointer"></button>
       </div>
-      <div class='relative rounded-full mx-auto size-80 overflow-hidden md:size-96'>
+
+      <div class='relative rounded-full mx-auto size-60 md:size-80 lg:size-96 overflow-hidden mt-6 md:mt-10'>
         <img alt="me" src="./src/assets/avatarIcon.jpg"
-          class='object-contain size-full absolute scale-105 translate-y-1 translate-x-1' />
+          class='object-cover w-full h-full absolute scale-105 translate-y-1 translate-x-1' />
       </div>
     </section>
 
-    <section class="mb-12">
-      <p class='text-md leading-8 text-gray-800 md:text-xl lg:max-w-[40%] mx-auto dark:text-gray-300'>
-        Ciao, sono Saverio, Junior Web Developer.<br />Dopo aver acquisito le basi teoriche dell'informatica
-        all'Università di Catania, sto perfezionando la mia formazione pratica presso l'ITS Steve Jobs Academy. Qui
-        lavoro su progetti concreti, padroneggiando le tecnologie più attuali. Unisco dedizione e curiosità a un
-        approccio pragmatico al problem solving. Cerco un ambiente stimolante dove poter crescere e portare valore.
-      </p>
+    <section class="mb-20 mt-10">
+      <div class="max-w-2xl mx-auto">
+        <p class='text-md leading-8 text-gray-800 md:text-xl text-justify hyphens-auto dark:text-gray-300'>
+          Ciao, sono Saverio, Junior Web Developer.<br class="hidden md:block" />
+          Dopo aver acquisito le basi teoriche dell'informatica all'Università di Catania, sto perfezionando la mia
+          formazione pratica presso l'ITS Steve Jobs Academy. Qui lavoro su progetti concreti, padroneggiando le
+          tecnologie più attuali. Unisco dedizione e curiosità a un approccio pragmatico al problem solving. Cerco un
+          ambiente stimolante dove poter crescere e portare valore.
+        </p>
+      </div>
     </section>
-    <h3 class="text-3xl pt-10 pb-6">
+
+    <h3 class="text-3xl pt-10 pb-6 text-center md:text-left font-semibold">
       Il mio stack tecnologico
     </h3>
-    <div class='lg:flex justify-center gap-10 '>
-      <div
-        class='flex-1 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-200 dark:shadow-gray-500 dark:shadow-lg'>
-        <h4 class='text-2xl pb-6 dark:text-gray-800'>Front-end</h4>
-        <div>
-          <img alt='react' src="./src/assets/devIcons/reactIcon.png" class='w-20 inline m-3' />
-          <img alt='react' src="./src/assets/devIcons/nextjsIcon.png" class='w-20 inline m-3' />
-          <img alt='react' src="./src/assets/devIcons/angularIcon.png" class='w-20 inline m-3' />
-          <img alt='tailwind' src="./src/assets/devIcons/tailwind.png" class='w-20 inline m-3' />
-          <img alt='tailwind' src="./src/assets/devIcons/bootIcon.png" class='w-20 inline m-3' />
+
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+
+      <div class='text-center shadow-lg p-8 rounded-xl bg-gray-50 dark:bg-gray-300 dark:shadow-gray-200 dark:shadow-sm'>
+        <h4 class='text-2xl pb-6 font-medium dark:text-gray-800'>Front-end</h4>
+        <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+          <img alt='react' src="./src/assets/devIcons/reactIcon.png" class='w-14 md:w-16' />
+          <img alt='nextjs' src="./src/assets/devIcons/nextjsIcon.png" class='w-14 p-1 md:w-16' />
+          <img alt='angular' src="./src/assets/devIcons/angularIcon.png" class='w-14 p-1 md:w-16' />
+          <img alt='tailwind' src="./src/assets/devIcons/tailwind.png" class='w-14 md:w-16' />
+          <img alt='bootstrap' src="./src/assets/devIcons/bootIcon.png" class='w-14 md:w-16' />
         </div>
       </div>
-      <div
-        class='flex-1 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-200 dark:shadow-gray-500 dark:shadow-lg'>
-        <h4 class='text-2xl pb-6 dark:text-gray-800'>Back-end</h4>
-        <img alt='node' src="./src/assets/devIcons/nodeIcon.png" class='w-20 inline m-3' />
-        <img alt='express' src="./src/assets/devIcons/expressIcon.png" class='w-20 inline m-3' />
-        <img alt='react' src="./src/assets/devIcons/nextjsIcon.png" class='w-20 inline m-3' />
-        <img alt='react' src="./src/assets/devIcons/angularIcon.png" class='w-20 inline m-3' />
+
+      <div class='text-center shadow-lg p-8 rounded-xl bg-gray-50 dark:bg-gray-300 dark:shadow-gray-200 dark:shadow-sm'>
+        <h4 class='text-2xl pb-6 font-medium dark:text-gray-800'>Back-end</h4>
+        <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+          <img alt='node' src="./src/assets/devIcons/nodeIcon.png" class='w-14 md:w-16' />
+          <img alt='express' src="./src/assets/devIcons/expressIcon.png" class='w-14 p-1 md:w-16' />
+          <img alt='nextjs-back' src="./src/assets/devIcons/nextjsIcon.png" class='w-14 p-1 md:w-16' />
+          <img alt='angular-back' src="./src/assets/devIcons/angularIcon.png" class='w-14 p-1 md:w-16' />
+        </div>
       </div>
-      <div
-        class='flex-1 text-center shadow-lg p-10 rounded-xl my-10 dark:bg-gray-200 dark:shadow-gray-500 dark:shadow-lg'>
-        <h4 class='text-2xl pb-6 dark:text-gray-800'>Others</h4>
-        <img alt='npm' src="./src/assets/devIcons/npmIcon.png" class='w-20 inline m-3' />
-        <img alt='git' src="./src/assets/devIcons/gitIcon.png" class='w-20 inline m-3' />
-        <img alt='mongo' src="./src/assets/devIcons/mongoIcon.png" class='w-20 inline m-3' />
-        <img alt='mongo' src="./src/assets/devIcons/mysql.png" class='w-20 inline m-3' />
+
+      <div class='text-center shadow-lg p-8 rounded-xl bg-gray-50 dark:bg-gray-300 dark:shadow-gray-200 dark:shadow-sm'>
+        <h4 class='text-2xl pb-6 font-medium dark:text-gray-800'>Others</h4>
+        <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6">
+          <img alt='npm' src="./src/assets/devIcons/npmIcon.png" class='w-14 md:w-16' />
+          <img alt='git' src="./src/assets/devIcons/gitIcon.png" class='w-14 md:w-16' />
+          <img alt='mongo' src="./src/assets/devIcons/mongoIcon.png" class='w-14 md:w-16' />
+          <img alt='mysql' src="./src/assets/devIcons/mysql.png" class='w-14 md:w-16' />
+        </div>
       </div>
     </div>
 
     <section>
-      <h3 class="text-3xl pt-10 pb-6">
+      <h3 class="text-3xl pt-20 pb-6 text-center md:text-left font-semibold">
         Creative Background
       </h3>
-      <div class="flex gap-10 flex-col lg:flex-row items-center">
-        <div id="carousel-container" class="w-full"></div>
-        <div class="lg:max-w-[40%]">
-          <p class="text-md leading-8 text-gray-800 md:text-xl dark:text-gray-300 mb-6">Fin da piccolo coltivo una forte
-            passione per la fotografia e il video, settori in cui ho maturato anche esperienza
-            professionale. Questo background arricchisce il mio approccio allo sviluppo web, permettendomi di
-            curare con particolare attenzione l'estetica e la composizione dei progetti.
-          </p>
-          <div class="flex items-center w-full">
-            <p class="basis-2/3 text-sm leading-8 text-gray-800 md:text-xl dark:text-gray-300 text-balance">
-              Faccio parte del collettivo Filmcan Movies, siamo un gruppo di creativi che si dedicano alla produzione di
-              cortometraggi e videoclip. Qui trovi la nostra pagina social:
+
+      <div class="flex flex-col lg:flex-row gap-10 lg:items-stretch">
+
+        <div id="carousel-container"
+          class="w-full h-[450px] md:h-[500px] lg:h-auto lg:min-h-[400px] lg:w-[60%] rounded-xl overflow-hidden shadow-lg relative bg-gray-100 dark:bg-gray-800">
+        </div>
+
+        <div class="w-full lg:w-[40%] flex flex-col justify-center gap-8">
+
+          <div class="max-w-md mx-auto lg:mx-0">
+            <p class="text-md leading-8 text-gray-800 md:text-xl dark:text-gray-300 text-left">
+              Fin da piccolo coltivo una forte passione per la fotografia e il video, settori in cui ho maturato anche
+              esperienza professionale. Questo background arricchisce il mio approccio allo sviluppo web, permettendomi
+              di curare con particolare attenzione l'estetica e la composizione dei progetti.
             </p>
-            <div class="basis-1/3 flex justify-center">
-              <button id="film-btn" class="rounded-full bg-white p-2 ease-in duration-200 inline-block shadow-lg shadow-gray-400/50  dark:shadow-white/30 hover:shadow-xl dark:hover:shadow-white/50    ">
-                <img alt='filmcan' src="./src/assets/LogoFilm.png" class='w-32 inline' />
-              </button>
+          </div>
+
+          <div
+            class="relative group w-full max-w-md mx-auto lg:mx-0 overflow-hidden bg-zinc-900 rounded-2xl shadow-2xl border border-zinc-800 text-white mt-6 lg:mt-0">
+
+            <div
+              class="absolute -right-10 -bottom-10 w-64 h-64 opacity-10 rotate-12 transition-transform duration-500 group-hover:rotate-0 group-hover:scale-110 pointer-events-none">
+              <img src="./src/assets/LogoFilmbig.png" alt="Background" class="w-full h-full object-contain invert">
+            </div>
+
+            <div class="relative p-8 z-10">
+              <h2 class="text-2xl font-bold mb-2 tracking-wide">Filmcan Movies</h2>
+              <p class="text-zinc-400 text-md leading-relaxed mb-6 text-left">
+                Faccio parte del collettivo Filmcan Movies, creativi dedicati alla produzione di cortometraggi e
+                videoclip.
+              </p>
+
+              <div class="flex space-x-4">
+                <button id="youtube-btn"
+                  class="p-2 bg-zinc-800 rounded-full hover:bg-red-600 hover:text-white transition-colors duration-300"></button>
+                <button id="insta-btn"
+                  class="p-2 bg-zinc-800 rounded-full hover:bg-pink-600 hover:text-white transition-colors duration-300"></button>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
-
     </section>
   </main>
-  <footer
-    class='flex flex-col items-center bg-gradient-to-t from-teal-600 to-teal-400 opacity-80 dark:bg-gradient-to-t dark:from-teal-800 dark:to-teal-600'>
-    <div class='text-3xl flex justify-center gap-16 py-3 text-gray-700 dark:text-gray-200'>
-      <button id="mail-footer-btn" class="hover:text-gray-900 hover:cursor-pointer"></button>
-      <button id="linkedin-footer-btn" class="hover:text-gray-900 hover:cursor-pointer"></button>
-      <button id="git-footer-btn" class="hover:text-gray-900 hover:cursor-pointer"></button>
+
+  <footer class="bg-teal-400 dark:bg-teal-600 py-6 mx-4 mb-4 rounded-3xl shadow-lg transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+
+      <div id="back-to-top"
+        class="text-slate-900 font-bold text-lg font-burtons text-center md:text-left cursor-pointer hover:text-white hover:scale-110 transition-all duration-300">
+        sasaDev
+      </div>
+
+      <div class="flex space-x-6 justify-center">
+        <button id="mail-footer-btn" class="text-slate-800 hover:text-white hover:scale-110 transition-all duration-300"
+          aria-label="Email"></button>
+        <button id="linkedin-footer-btn"
+          class="text-slate-800 hover:text-white hover:scale-110 transition-all duration-300"
+          aria-label="LinkedIn"></button>
+        <button id="git-footer-btn" class="text-slate-800 hover:text-white hover:scale-110 transition-all duration-300"
+          aria-label="GitHub"></button>
+      </div>
+
+      <div class="text-sm text-slate-800 font-semibold opacity-90 text-center md:text-right">
+        &copy; <span id="year">2026</span> Saverio Santonocito
+      </div>
+
     </div>
-    <!-- <Link activeClass="active" to="#" spy={true} smooth={true} offset={0} duration={500}> -->
-    <h1 className='text-lg font-burtons pt-1 hover:cursor-alias dark:text-gray-200'>sasaDev</h1>
-    <!-- </Link> -->
   </footer>
 </body>
 

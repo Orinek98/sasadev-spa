@@ -13,3 +13,35 @@
 // Se vuoi usare SOLO Tailwind per queste cose, NON importare le utilities qui sotto.
 // Se invece vuoi mantenere l'HTML originale di Bootstrap, scommenta questa riga:
 // @import "bootstrap/scss/utilities";
+
+#myComponentCarousel {
+
+    .carousel-indicators {
+        margin-bottom: 1rem;
+        
+        [data-bs-target] {
+            width: 10px;
+            height: 10px;      
+            border-radius: 100%;
+            margin: 0 6px;
+            border: none;
+            background-color: #fff; 
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+            
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 10%;
+        opacity: 0.7;
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

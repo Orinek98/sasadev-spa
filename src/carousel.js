@@ -18,33 +18,30 @@ export class SpaCarousel {
         const slidesHtml = this.images.map((img, index) => {
             const isActive = index === 0 ? 'active' : '';
             return `
-            <div class="carousel-item h-100 ${isActive}">
+            <div class="carousel-item h-full ${isActive}">
                 <img 
                     src="${img.src}" 
-                    class="d-block w-100 h-100" 
-                    style="object-fit: cover;" 
+                    class="d-block w-full h-full object-cover" 
                     alt="${img.alt || 'Slide image'}"
                 >
             </div>`;
         }).join('');
 
         return `
-        <div id="myComponentCarousel" class="carousel slide h-100">
+        <div id="myComponentCarousel" class="carousel slide h-full w-full" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 ${indicatorsHtml}
             </div>
             
-            <div class="carousel-inner h-100">
+            <div class="carousel-inner h-full">
                 ${slidesHtml}
             </div>
             
-            <button class="carousel-control-prev" type="button" data-bs-target="#myComponentCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#myComponentCarousel" data-bs-slide="prev" aria-label="Previous">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myComponentCarousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#myComponentCarousel" data-bs-slide="next" aria-label="Next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
             </button>
         </div>
         `;
@@ -58,21 +55,17 @@ export class SpaCarousel {
             return;
         }
 
-        // Importante: Assicuriamoci che il container padre abbia position relative
-        // (Bootstrap a volte ne ha bisogno per i controlli assoluti)
-        container.style.position = 'relative'; 
-
         container.innerHTML = this._generateTemplate();
 
         if (this.images.length === 0) return;
 
         const carouselEl = container.querySelector('#myComponentCarousel');
+        
         this.bsCarousel = new Carousel(carouselEl, {
             interval: 3000,
-            ride: 'carousel'
+            ride: 'carousel',
+            pause: 'hover'
         });
-
-        console.log(`Carousel montato con ${this.images.length} immagini.`);
     }
 
     unmount() {

@@ -1,6 +1,9 @@
 import { getIcon, moonIcon} from "./icons.js";
 import { SpaCarousel } from './carousel.js';
 import './styles/custom-bootstrap.scss'; 
+import image1 from './assets/pictures/guate1.webp';
+import image2 from './assets/pictures/guate2.webp';
+import image3 from './assets/pictures/etna.webp';
 
 //Theme toggle button
 const themeToggleBtn = document.getElementById('theme-toggle');
@@ -39,10 +42,11 @@ gitBtn.addEventListener('click', () =>{
 
 // // // Carousel
 const myImages = [
-    { src: './src/assets/pictures/guate1.webp', alt: 'Tikal Temple' },
-    { src: './src/assets/pictures/guate2.webp', alt: 'Lake Atitlan' },
-    { src: './src/assets/pictures/etna.webp', alt: 'Mount Etna' },
+    { src: image1, alt: 'Tikal Temple' },
+    { src: image2, alt: 'Lake Atitlan' },
+    { src: image3, alt: 'Mount Etna' },
 ];
+
 
 // Creazione
 const myCarousel = new SpaCarousel('carousel-container', myImages);
@@ -50,13 +54,25 @@ const myCarousel = new SpaCarousel('carousel-container', myImages);
 // Avvio
 myCarousel.mount();
 
-const filmBtn = document.getElementById('film-btn');
-filmBtn.addEventListener('click', () => {
+// FilmCan Card
+const cardIconSize = '1.8rem';
+const instagramBtn = document.getElementById('insta-btn');
+const youtubeBtn = document.getElementById('youtube-btn');
+
+instagramBtn.innerHTML = getIcon('instagram', cardIconSize);
+youtubeBtn.innerHTML = getIcon('youtube', cardIconSize);
+
+instagramBtn.addEventListener('click', () => {
     window.open('https://www.instagram.com/filmcanmovies');
 });
 
+youtubeBtn.addEventListener('click', () => {
+    window.open('https://www.youtube.com/@filmcanmovies.');
+});
+
+
 //Footer social buttons
-const footerIconSize = '1.8rem';
+const footerIconSize = '2rem';
 const mailFooterBtn = document.getElementById('mail-footer-btn');
 mailFooterBtn.innerHTML = getIcon('mail', footerIconSize);
 mailFooterBtn.addEventListener('click', () => {
@@ -75,4 +91,21 @@ gitFooterBtn.addEventListener('click', () =>{
   window.open('https://github.com/Orinek98');
 });
 
+//year in footer
+const yearElement = document.getElementById("year");
+if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+}
+
+// Funzione Back to Top Smooth
+const backToTopBtn = document.getElementById('back-to-top');
+
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Questa è la magia che rende lo scroll fluido
+        });
+    });
+}
 
